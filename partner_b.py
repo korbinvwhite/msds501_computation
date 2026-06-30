@@ -33,9 +33,16 @@ scores = ['88', '95', 'absent', '72', 'n/a', '84']
 valid = []
 
 for i, s in enumerate(scores):
-    score = int(s)            # <-- this line crashes on bad strings
-    print(f'Score [{i}]: {score}')
-    valid.append(score)
+    try:
+        score = int(s)            # <-- this line crashes on bad strings
+        print(f'Score [{i}]: {score}')
+        valid.append(score)
+    except ValueError:
+        print(f"[index {i}] Skipped bad score: '{s}'")
+
+
 
 print(f'Total of valid scores: {sum(valid)}')
 print(f'Count of valid scores: {len(valid)}')
+
+#Task 2 the error is a ValueError(TypeError) on line 36. The reason for the error is it is trying to read a string as a int
