@@ -5,7 +5,7 @@
 # Some readings are corrupt (non-numeric). The script tries to
 # convert every reading to a float so we can compute the average.
 #
-# YOUR TASK (Task 2): Run this script and read the error.
+# YOUR TASK (Task 2): Run this script and read the error. blah blah
 #   - What type of error is it?
 #              ValueError: could not convert string to float: 'N/A'
 #   - Which line causes it?
