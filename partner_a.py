@@ -11,8 +11,8 @@
 #   - Which line causes it?
 #               Line 35
 #   - Write a comment below explaining the cause.
-#               Its bc its expecting a a string that is able to convert to a float
-#               but you can't convery 'NA' into a float
+#               Its bc its expecting a string that is able to convert to a float
+#               but, you can't convert 'NA' into a float
 # YOUR TASK (Task 3): Wrap the risky conversion in try/except.
 #   - Catch the specific error type (not bare except:)
 #   - When a bad value is caught, print a message that includes
@@ -35,6 +35,7 @@ readings = ['72.1', '68.5', 'N/A', '74.0', 'sensor_error', '69.3']
 valid = []
 
 for i, r in enumerate(readings):
+    #without the try and except, it would crash if got value error, now if it gets the error it knows what to do
     try:     
         temp = float(r)           # <-- this line crashes on bad strings
         print(f'Reading [{i}]: {temp}')
